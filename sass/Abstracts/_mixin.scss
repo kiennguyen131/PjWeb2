@@ -1,0 +1,7 @@
+@mixin clearfix{              // xoa cac css thua, cac css khong hop
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}

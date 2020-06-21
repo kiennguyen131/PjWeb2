@@ -1,0 +1,45 @@
+// chua cac animation
+@keyframes moveInLeft {  /* tao animation */
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80%{
+        transform: translate(10px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes moveInRight {  /* tao animation */
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80%{
+        transform: translate(-10px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes moveInBot {  /* tao animation */
+    0%{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+
+    100%{
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}

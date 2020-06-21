@@ -1,181 +1,134 @@
-/*
-    light blue: #8e9efc
-    medium blue: #5a73fc
-    dark blue: #1c3eff
-*/
+@keyframes moveInLeft {
+  /* tao animation */
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); }
+  80% {
+    transform: translate(10px); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+@keyframes moveInRight {
+  /* tao animation */
+  0% {
+    opacity: 0;
+    transform: translateX(100px); }
+  80% {
+    transform: translate(-10px); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+@keyframes moveInBot {
+  /* tao animation */
+  0% {
+    opacity: 0;
+    transform: translateY(-30px); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
 
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
 body {
-    font-family: "lato", sans-serif;
-    font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 1.7;
-    color: #777777;
-    padding: 30px;
-}
+  box-sizing: border-box; }
 
-header {
-    height: 95vh;
-    background-image: linear-gradient(to right bottom, rgba(142, 158, 252, .6), rgba(28, 62, 255, .6)),
-    url('../img/background.jpg');
-    background-size: cover;
-    background-position: top;
-    position: relative;  
-    clip-path: ellipse(100% 58% at 48% 31%);
+html {
+  font-size: 62.5%; }
 
-}
-
-.header__text-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.header__logo {
-    height: 70px;
-} 
-
-.header__logo-box {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-}
+body {
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #777777;
+  padding: 30px;
+  box-sizing: border-box; }
 
 .heading-primary {
-    color: #fff;
-    text-transform: uppercase;
-    margin-bottom: 60px;
-    /*animation-name: moveInLeft;   tao animation 
-    animation-duration: 2s;         /*thoi gian chay animation*/ 
-    /*animation-iteration-count: 2;     so lan lap animation 
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  /*animation-name: moveInLeft;   tao animation 
+    animation-duration: 2s;         /*thoi gian chay animation*/
+  /*animation-iteration-count: 2;     so lan lap animation 
     animation-delay: 1s;              hoi gian bat dau chay animation 
-    animation-timing-function: cubic-bezier()  khoang thoi gian chay trong animation */
-
-}
-
-.heading-primary--main {
+    animation-timing-function: cubic-bezier()  khoang thoi gian chay trong animation */ }
+  .heading-primary--main {
     display: block;
     font-size: 6.2rem;
     font-weight: 400;
     letter-spacing: 15px;
-    animation: moveInLeft 1.5s;
-}
-
-.heading-primary--sub{
+    animation: moveInLeft 1.5s; }
+  .heading-primary--sub {
     display: block;
-    font-size:2rem;
+    font-size: 2rem;
     font-weight: 700;
     letter-spacing: 18px;
-    animation: moveInRight 1.5s;
-}
+    animation: moveInRight 1.5s; }
 
-.btn,
-.btn:link,
-.btn:visited {
-    text-decoration: none;
-    border-radius: 100px;
-    text-transform: uppercase;
-    padding:15px 40px;
-    display: inline-block;
-    font-size: 1.6rem;
-    position: relative;
-    animation: moveInBot 1.5s;
-}
+.btn:link, .btn:visited {
+  text-decoration: none;
+  border-radius: 100px;
+  text-transform: uppercase;
+  padding: 15px 40px;
+  display: inline-block;
+  font-size: 1.6rem;
+  position: relative;
+  animation: moveInBot 1.5s; }
 
 .btn--white {
-    color: #777777;
-    background-color: #fff;
-}
+  color: #777777;
+  background-color: #fff; }
+  .btn--white::after {
+    background-color: #fff; }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-}
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
 
-.btn:active {
-    outline: none;
-    transform: translateY(-1px);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-}
+.btnactive {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); }
 
 .btn::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 100px;
+  z-index: -1;
+  transition: all .4s; }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(90, 115, 252, 0.3), rgba(28, 62, 255, 0.3)), url("../img/background.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: ellipse(100% 58% at 48% 31%); }
+  .header__text-box {
     position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 100px;
-    z-index: -1;
-    transition: all .4s;
-
-}
-
-.btn--white::after {
-    background-color: #fff;
-}
-
-.btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-
-}
-
-@keyframes moveInLeft {  /* tao animation */
-    0%{
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-
-    80%{
-        transform: translate(10px);
-    }
-
-    100%{
-        opacity: 1;
-        transform: translate(0, 0);
-    }
-}
-
-@keyframes moveInRight {  /* tao animation */
-    0%{
-        opacity: 0;
-        transform: translateX(100px);
-    }
-
-    80%{
-        transform: translate(-10px);
-    }
-
-    100%{
-        opacity: 1;
-        transform: translate(0, 0);
-    }
-}
-
-@keyframes moveInBot {  /* tao animation */
-    0%{
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-
-
-    100%{
-        opacity: 1;
-        transform: translate(0, 0);
-    }
-}
-
-html {
-    font-size: 62.5%;
-}
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+  .header__logo {
+    height: 70px; }
+  .header__logo-box {
+    position: absolute;
+    top: 30px;
+    left: 30px; }

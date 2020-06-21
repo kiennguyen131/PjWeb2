@@ -1,0 +1,54 @@
+//chua cac component co the tai su dung duoc
+.btn{
+    &:link,
+    &:visited {
+        text-decoration: none;
+        border-radius: 100px;
+        text-transform: uppercase;
+        padding:15px 40px;
+        display: inline-block;
+        font-size: 1.6rem;
+        position: relative;
+        animation: moveInBot 1.5s;
+    }
+
+    &--white {
+        color: #777777;
+        background-color: $color-white;
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 20px rgba($color-black, 0.3);
+
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        
+        }
+    }
+    
+    &active {
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 5px 20px rgba($color-black, 0.3);
+    }
+    
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 100px;
+        z-index: -1;
+        transition: all .4s;
+    }
+    
+}

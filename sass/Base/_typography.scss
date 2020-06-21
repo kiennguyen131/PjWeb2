@@ -1,0 +1,38 @@
+// chua setting cua body
+body {
+    font-family: "lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: $color-grey;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    /*animation-name: moveInLeft;   tao animation 
+    animation-duration: 2s;         /*thoi gian chay animation*/ 
+    /*animation-iteration-count: 2;     so lan lap animation 
+    animation-delay: 1s;              hoi gian bat dau chay animation 
+    animation-timing-function: cubic-bezier()  khoang thoi gian chay trong animation */
+
+    &--main {
+        display: block;
+        font-size: 6.2rem;
+        font-weight: 400;
+        letter-spacing: 15px;
+        animation: moveInLeft 1.5s;
+    }
+    
+    &--sub{
+        display: block;
+        font-size:2rem;
+        font-weight: 700;
+        letter-spacing: 18px;
+        animation: moveInRight 1.5s;
+    }
+
+}

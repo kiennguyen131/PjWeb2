@@ -1,10 +1,14 @@
 @import './Abstracts/_variable.scss';
 @import './Base/animations';
-@import './Base/_base.scss';
-@import './Base/_typography.scss';
+@import './Base/base.scss';
+@import './Base/typography.scss';
 @import './Components/buttons';
-@import './Layout/_header.scss';
-@import './Layout/_grid.scss';
+@import './Layout/header.scss';
+@import './Layout/grid.scss';
+@import './Pages/home.scss';
+@import './Base/utilities.scss';
+@import './Base/utilities.scss';
+@import './Components/Composition.scss'
 
 
 

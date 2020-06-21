@@ -30,9 +30,44 @@ body {
     &--sub{
         display: block;
         font-size:2rem;
-        font-weight: 700;
+        font-weight: 500;
         letter-spacing: 18px;
         animation: moveInRight 1.5s;
     }
 
 }
+
+.heading-secondary {
+    font-size: 3,5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    letter-spacing: 2rem;
+    cursor: pointer;  
+             //xet hinh dang con tro khi tro vao
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    color: transparent;
+    -webkit-background-clip: text;  // cat background
+
+    transition: all .2s;
+
+    &:hover{
+        transform: skewY(-3deg) scale(1.1);
+        text-shadow: .5rem 1rem 2rem rgba($color-black, .4);
+    }
+}
+
+.heading-tertiary {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph{
+    font-size: 1.6rem;
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }
+}
+
+

@@ -1,8 +1,7 @@
 @import '../Abstracts/_mixin.scss';
 .row{
     [class^="col-"]{                                        // tat ca cac class co chua "col-", neu muon chon cac class
-        background-color: yellow;                         // ket thu thuc bang "col-" thi viet [class$="col-"]
-        float: left;
+        float: left;                                                // ket thu thuc bang "col-" thi viet [class$="col-"]
         &:not(:last-child){                                  // cac colum cuoi moi row
             margin-right: $gutter-horizontal;
         }
@@ -11,9 +10,8 @@
     &:not(:last-child){
         margin-bottom: $gutter-vertical;  //tu row cuoi cung ra
     }
-    max-width: grid-width;
+    max-width: $grid-width;
     margin: 0 auto;
-    background-color: $color-primary-light;
 
     .col-1-of-2{
         width: calc((100% - #{$gutter-horizontal})/2); // ham co san trong css

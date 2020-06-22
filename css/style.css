@@ -226,6 +226,14 @@ body {
   padding: 25rem 0 10rem 0;
   margin-top: -20rem; }
 
+.section-testimonials {
+  position: relative;
+  padding: 5rem 0; }
+
+.section-enroll {
+  padding: 10rem;
+  background-image: linear-gradient(to right bottom, #5a73fc, #1c3eff); }
+
 .u-center-text {
   text-align: center !important; }
 
@@ -384,3 +392,65 @@ body {
     transform: rotateY(-180deg); }
   .card:hover .card__side--back {
     transform: rotateY(0); }
+
+.testimonial {
+  width: 90%;
+  padding: 4rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.15);
+  font-size: 1.6rem;
+  border-radius: 100rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding-left: 9rem; }
+  .testimonial__shape {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    background-color: orangered;
+    float: left;
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-4rem);
+    shape-outside: circle(50% at 50% 50%); }
+  .testimonial__img {
+    width: 100%; }
+  .testimonial__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1,7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all .2s; }
+  .testimonial:hover .testimonial__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .testimonial:hover .testimonial__img {
+    filter: blur(0.5rem) brightness(70%);
+    transform: scale(1.05); }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: .3;
+  overflow: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
+.enroll {
+  background-image: radial-gradient(150% 200% ellipse at -15%, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url("../../img/humangroups2.jpg");
+  background-size: cover;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  border-radius: 5rem;
+  height: 50rem; }
+  .enroll__form {
+    padding: 6rem; }

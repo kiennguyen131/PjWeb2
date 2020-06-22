@@ -1,0 +1,50 @@
+.testimonial{
+    width: 90%;
+    padding: 4rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    box-shadow: 0 3rem 6rem rgba($color-black, .15a);
+    font-size: $default-font-size;
+    border-radius: 100rem;
+    background-color: rgba($color-white, .8);
+    padding-left: 9rem;
+
+    &__shape{
+        position: relative;
+        width: 15rem;
+        height: 15rem;
+        background-color: orangered;
+        float: left;
+        clip-path: circle(50% at 50% 50%);
+        transform: translateX(-4rem);
+        shape-outside: circle(50% at 50% 50%); // cho chu bo theo hinh tron
+    }
+
+    &__img{
+        width: 100%;
+    }
+
+    &__caption{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,20%);
+        color:  $color-white;
+        text-transform: uppercase;
+        font-size:1,7rem;
+        text-align: center;
+        opacity: 0;
+        transition: all .2s;
+    }
+
+    &:hover &__caption{
+        opacity: 1;
+        transform: translate(-50%,-50%);
+    }
+
+    &:hover &__img{
+        filter: blur(.5rem) brightness(70%);  //lam nhoe anh di
+        transform: scale(1.05);
+        
+    }
+}
